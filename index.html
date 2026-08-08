@@ -12,9 +12,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+
 
 </head>
 
@@ -24,26 +29,62 @@
     <a href="#main">Bỏ qua đến nội dung chính</a>
 
     <!-- 1. NAV -->
-    <header>
-        <nav aria-label="Điều hướng chính">
-            <a href="#">HRManager</a>
-            <ul>
-                <li><a href="#company" class="text-brand">Company</a></li>
-                <li><a href="#marketplace">Marketplace</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md">
+        <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+            <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
+                HRManager
+            </a>
+            <ul class="hidden items-center gap-8 md:flex">
+                <li><a href="#company"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
+                <li><a href="#marketplace"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
+                <li><a href="#tinh-nang"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
+                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a>
+                </li>
+                <li><a href="#contact"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
             </ul>
-            <a href="#cta">Dùng thử miễn phí</a>
+            <div class="flex items-center gap-4">
+                <a href="#cta" class="text-sm font-semibold text-ink transition-colors hover:text-brand-600">
+                    Log In
+                </a>
+                <a href="#cta" class="btn btn-primary">
+                    Get started
+                </a>
+            </div>
+
         </nav>
     </header>
 
     <main id="main">
-        <section aria-labelledby="hero-title">
-            <h1 id="hero-title">Giảm thiểu thời gian tính toán thủ công mất thời gian</h1>
-            <p>Chấm công chính xác, tự động hóa bảng lương và quản lý hồ sơ nhân sự tập trung trên một nền tảng.</p>
-            <a href="#bang-gia">Bạn muốn trải nghiệm thử? Chúng tôi có bản trải nghiệm thử 7 ngày hoàn toàn miễn phí.</a>
-            <img src="assets/img/hero-banner.png" alt="Giao diện bảng điều khiển quản lý nhân sự HRManager">
+        <section aria-labelledby="hero-title" class="section grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+            <div>
+                <h1 id="hero-title"
+                    class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                    Tự động hóa quản lý nhân sự, tiết kiệm thời gian, nâng cao hiệu quả
+                </h1>
+
+                <p class="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+                    Chấm công chính xác, tự động hóa bảng lương và quản lý hồ sơ nhân sự tập trung trên một nền tảng.
+                </p>
+
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <a href="#bang-gia" class="btn btn-primary text-base px-6 py-3">
+                        Trải nghiệm miễn phí
+                    </a>
+                    <a href="#faq" class="btn btn-secondary text-base px-6 py-3">
+                        Pricing & FAQ
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <img src="assets/img/hero_section.png" alt="Giao diện bảng điều khiển quản lý nhân sự HRManager"
+                    class="w-full max-w-lg rounded-card border border-line shadow-lg">
+            </div>
+
         </section>
 
         <!-- 3. CUSTOMER LOGOS / KHÁCH HÀNG DÙNG THỬ -->
@@ -104,7 +145,8 @@
             <ul>
                 <li>
                     <blockquote>
-                        <p>Phần mềm hỗ trợ chấm công chính xác, có nhận diện khuôn mặt lúc chấm công, có thể quản lý tập trung cho nhiều chi nhánh trên toàn quốc.</p>
+                        <p>Phần mềm hỗ trợ chấm công chính xác, có nhận diện khuôn mặt lúc chấm công, có thể quản lý tập
+                            trung cho nhiều chi nhánh trên toàn quốc.</p>
                         <footer>— <cite>Lê Thị Cẩm Tú (Giám đốc HR)</cite></footer>
                     </blockquote>
                 </li>
@@ -124,13 +166,15 @@
                 <li>
                     <h3>Gói Khởi Nghiệp</h3>
                     <p><strong>20.000.000 VND / nhân viên / tháng</strong></p>
-                    <p>Dành cho doanh nghiệp dưới 30 nhân sự. Đầy đủ tính năng như quản lý hồ sơ nhân viên và chấm công cơ bản.</p>
+                    <p>Dành cho doanh nghiệp dưới 30 nhân sự. Đầy đủ tính năng như quản lý hồ sơ nhân viên và chấm công
+                        cơ bản.</p>
                     <a href="#">Chọn gói Khởi Nghiệp</a>
                 </li>
                 <li>
                     <h3>Gói Tiêu Chuẩn</h3>
                     <p><strong>70.000.000 VND / nhân viên / tháng</strong></p>
-                    <p>Dành cho quy mô từ 30 - 150 nhân sự. Bổ sung tính năng tự động tính lương và tự động xếp lịch làm tự động..</p>
+                    <p>Dành cho quy mô từ 30 - 150 nhân sự. Bổ sung tính năng tự động tính lương và tự động xếp lịch làm
+                        tự động..</p>
                     <a href="#">Chọn gói Tiêu Chuẩn</a>
                 </li>
                 <li>

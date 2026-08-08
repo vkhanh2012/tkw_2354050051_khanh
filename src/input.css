@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* mã màu chủ đề */
+  --color-brand-600: #e50914;
+  --color-brand-700: #cf0610;
+  --color-accent-500: #e50914;
+
+  /* màu chữ */
+  --color-ink: #221f1f;
+  --color-muted: #8d0f15;
+  --color-surface: #ffffff;
+  --color-line: #ffdee0;
+
+  /* font chữ */
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /*radius */
+  --radius-card: 0.875rem;
+  --radius-pill: 0.5rem;
+}
+
+/* Base Component Utility Class */
+@layer components {
+  .section {
+    @apply mx-auto w-full max-w-6xl px-5 py-24;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-(--radius-pill) px-5 py-2.5 text-sm font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+}

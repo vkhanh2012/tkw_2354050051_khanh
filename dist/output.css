@@ -20,6 +20,9 @@
     --default-mono-font-family: var(--font-mono);
     --color-brand-600: #e50914;
     --color-brand-700: #cf0610;
+    --color-ink: #221f1f;
+    --color-surface: #ffffff;
+    --font-body: "Inter", system-ui, sans-serif;
     --radius-pill: 0.5rem;
   }
 }
@@ -206,6 +209,20 @@
     }
   }
 }
+@layer base {
+  html {
+    sroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    background-color: var(--color-surface);
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+@layer components;
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;

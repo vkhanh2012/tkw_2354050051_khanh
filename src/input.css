@@ -35,3 +35,21 @@
     @apply bg-brand-600 text-white hover:bg-brand-700;
   }
 }
+
+@layer base {
+    html{
+        sroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+    }
+
+    body{
+        @apply bg-surface text-ink font-body antialiased;
+    }
+
+    /* h1, h2, h3{
+        @apply font-display tracking-light;
+    } */
+}
+
+@layer components {
+}

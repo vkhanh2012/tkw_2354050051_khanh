@@ -15,7 +15,9 @@
   --color-line: #ffdee0;
 
   /* font chữ */
-  --font-display: "Inter", system-ui, sans-serif;
+  /* tiêu đề */
+  --font-display: "Anton", sans-serif;
+    /* nội dung */
   --font-body: "Inter", system-ui, sans-serif;
 
   /*radius */

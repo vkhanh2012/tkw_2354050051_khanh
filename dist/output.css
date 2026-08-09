@@ -12,6 +12,7 @@
     --spacing: 0.25rem;
     --container-lg: 32rem;
     --container-6xl: 72rem;
+    --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -386,6 +387,9 @@
     }
   }
   @media (width >= 64rem) {
+    .lg\:mx-10 {
+      margin-inline: calc(var(--spacing) * 10);
+    }
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -402,9 +406,15 @@
   .section {
     margin-inline: auto;
     width: 100%;
-    max-width: var(--container-6xl);
+    max-width: var(--container-7xl);
     padding-inline: calc(var(--spacing) * 5);
-    padding-block: calc(var(--spacing) * 24);
+    padding-block: calc(var(--spacing) * 20);
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 10);
+    }
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
   }
   .btn {
     display: inline-flex;

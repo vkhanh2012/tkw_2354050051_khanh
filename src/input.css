@@ -28,7 +28,7 @@
 /* Base Component Utility Class */
 @layer components {
   .section {
-    @apply mx-auto w-full max-w-6xl px-5 py-24;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-20 py-20;
   }
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;

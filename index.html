@@ -1,50 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phần mềm quản lý nhân sự</title>
+    <title>Phần mềm quản lý nhân sự - HRManager</title>
 
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
-    <!-- <a href="#main">Bỏ qua đến nội dung chính</a> -->
-
-    <!-- 1. NAV -->
+    <!-- 1. NAVBAR -->
     <header class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md">
-        <nav aria-label="Điều hướng chính" class="mx-auto lg:mx-10 flex max-w-6xl items-center justify-between px-5 py-4">
+        <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
             <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
                 HRManager
             </a>
             <ul class="hidden items-center gap-8 md:flex">
-                <li><a href="#company"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
-                <li><a href="#marketplace"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
-                <li><a href="#tinh-nang"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
-                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a>
-                </li>
-                <li><a href="#contact"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
+                <li><a href="#company" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
+                <li><a href="#marketplace" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
+                <li><a href="#tinh-nang" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
+                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a></li>
+                <li><a href="#contact" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
             </ul>
             <div class="flex items-center gap-4">
                 <a href="#cta" class="text-sm font-semibold text-ink transition-colors hover:text-brand-600">
@@ -54,15 +35,14 @@
                     Get started
                 </a>
             </div>
-
         </nav>
     </header>
 
     <main id="main">
+        <!-- 2. HERO SECTION -->
         <section aria-labelledby="hero-title" class="section grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
-                <h1 id="hero-title"
-                    class="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+                <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6xl">
                     Tự động hóa quản lý nhân sự, tiết kiệm thời gian, nâng cao hiệu quả
                 </h1>
 
@@ -74,7 +54,7 @@
                     <a href="#bang-gia" class="btn btn-primary text-base px-6 py-3">
                         Trải nghiệm miễn phí
                     </a>
-                    <a href="#faq" class="btn btn-secondary text-base px-6 py-3">
+                    <a href="#faq" class="btn-secondary text-base px-6 py-3">
                         Pricing & FAQ
                     </a>
                 </div>
@@ -84,152 +64,142 @@
                 <img src="assets/img/hero_section.png" alt="Giao diện bảng điều khiển quản lý nhân sự HRManager"
                     class="w-full max-w-lg rounded-card border border-line shadow-lg">
             </div>
-
         </section>
 
-        <!-- 3. CUSTOMER LOGOS / KHÁCH HÀNG DÙNG THỬ -->
-        <section aria-labelledby="doi-tac-title">
-            <h2 id="doi-tac-title">Được tin dùng dùng bởi nhiều doanh nghiệp</h2>
-            <ul>
-                <li><span>Katinat SaiGon Cafe</span></li>
-                <li><span>Chuỗi cửa hàng Undy</span></li>
-                <li><span>Công ty TNHH Giày Á Châu</span></li>
-                <li><span>Phúc Long Coffee & Tea</span></li>
-            </ul>
+        <!-- 3. CUSTOMER LOGOS / DẢI KHÁCH HÀNG (ÁP DỤNG @apply partner-item) -->
+        <section aria-labelledby="doi-tac-title" class="border-y border-line bg-surface py-12 lg:py-16">
+            <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20">
+                <h2 id="doi-tac-title" class="text-center text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
+                    Được tin dùng bởi nhiều doanh nghiệp ở thành phố Hồ Chí Minh
+                </h2>
+                <ul class="mt-8 flex flex-wrap items-center justify-between gap-x-12 gap-y-6">
+                    <li class="partner-item">Katinat Saigon Kafe</li>
+                    <li class="partner-item">Chuỗi cửa hàng Undy</li>
+                    <li class="partner-item">Công ty TNHH Giày Á Châu</li>
+                    <li class="partner-item">Phúc Long Coffee & Tea</li>
+                </ul>
+            </div>
         </section>
 
-        <!-- 4. TÍNH NĂNG / FEATURE -->
-        <section id="tinh-nang" aria-labelledby="tinh-nang-title">
-            <h2 id="tinh-nang-title">Các tính năng cốt lõi</h2>
-            <ul>
-                <li>
-                    <h3>Quản lý hồ sơ nhân sự tập trung</h3>
-                    <p>Lưu trữ toàn bộ thông tin hợp đồng, quá trình công tác và đánh giá hiệu suất của nhân viên an
-                        toàn trên Cloud.</p>
+        <!-- 4. TÍNH NĂNG / FEATURES (ÁP DỤNG @apply eyebrow, card, feature-item, check-icon) -->
+        <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section">
+            <div class="max-w-2xl">
+                <p class="eyebrow">Tính năng</p>
+                <h2 id="tinh-nang-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Các tính năng cốt lõi</h2>
+                <p class="mt-4 text-base leading-relaxed text-muted">
+                    Không có tính năng thừa. Tự động hóa toàn bộ quy trình chấm công, tính lương và phân ca kíp phức tạp chỉ trên một nền tảng duy nhất.
+                </p>
+            </div>
+            
+            <!-- 3 Card tính năng gốc -->
+            <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <li class="card">
+                    <h3 class="text-xl font-semibold">Quản lý hồ sơ nhân sự tập trung</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-muted">
+                        Lưu trữ toàn bộ thông tin hợp đồng, quá trình công tác và đánh giá hiệu suất của nhân viên an toàn trên Cloud.
+                    </p>
                 </li>
-                <li>
-                    <h3>Chấm công & Tính lương tự động</h3>
-                    <p>Tích hợp máy chấm công khuôn mặt, tự động tổng hợp công và xuất bảng lương chính xác chỉ trong 5
-                        phút.</p>
+                <li class="card">
+                    <h3 class="text-xl font-semibold">Chấm công & Tính lương tự động</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-muted">
+                        Tích hợp máy chấm công khuôn mặt, tự động tổng hợp công và xuất bảng lương chính xác chỉ trong 5 phút.
+                    </p>
                 </li>
-                <li>
-                    <h3>Đánh giá hiệu suất KPI & MBO</h3>
-                    <p>Thiết lập mục tiêu, theo dõi tiến độ công việc và đánh giá năng lực nhân viên minh bạch theo kỳ.
+                <li class="card">
+                    <h3 class="text-xl font-semibold">Đánh giá hiệu suất KPI & MBO</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-muted">
+                        Thiết lập mục tiêu, theo dõi tiến độ công việc và đánh giá năng lực nhân viên minh bạch theo kỳ.
                     </p>
                 </li>
             </ul>
+
+            <!-- Khối so le 1 theo Figma: Chữ trái - Minh họa phải -->
+            <div class="mt-24 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                <div>
+                    <h3 class="text-3xl font-bold sm:text-4xl">Làm việc với các công cụ bạn đã quen dùng</h3>
+                    <p class="mt-4 text-base leading-relaxed text-muted">
+                        Kết nối mượt mà với hệ sinh thái kế toán, thuế và ngân hàng hiện tại của doanh nghiệp mà không cần thay đổi quy trình vận hành sẵn có.
+                    </p>
+                    <ul class="mt-6 space-y-4 border-t border-line pt-6">
+                        <li class="feature-item">
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Tự động đồng bộ ca kíp với máy chấm công
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Quy trình duyệt đơn từ trực tuyến
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Quản lý hồ sơ nhân sự an toàn
+                        </li>
+                    </ul>
+                </div>
+                <div class="card bg-line/10 p-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-36 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Báo cáo nhân sự</div>
+                        <div class="h-36 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Lịch ca làm việc</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Khối so le 2 theo Figma: Minh họa trái - Chữ phải -->
+            <div class="mt-24 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                <div class="order-2 lg:order-1 card bg-line/10 p-6">
+                    <div class="h-48 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Bản đồ phân bổ chi nhánh toàn quốc</div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl font-bold sm:text-4xl">Sẵn sàng mở rộng quy mô cùng doanh nghiệp</h3>
+                    <p class="mt-4 text-base leading-relaxed text-muted">
+                        Hệ thống hoạt động ổn định và hỗ trợ quản lý tập trung từ doanh nghiệp 20 nhân sự đến chuỗi hàng trăm chi nhánh trên toàn quốc.
+                    </p>
+                    <ul class="mt-6 space-y-4 border-t border-line pt-6">
+                        <li class="feature-item">
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            Báo cáo phân tích dữ liệu đa chiều thời gian thực
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- 5. SỐ LIỆU / SOCIAL PROOF -->
-        <section aria-labelledby="so-lieu-title">
-            <h2 id="so-lieu-title">Kết quả ấn tượng trong năm vừa qua</h2>
-            <ul>
-                <li>
-                    <strong>80%</strong>
-                    <span>Thời gian tính lương hàng tháng được cắt giảm</span>
-                </li>
-                <li>
-                    <strong>100%</strong>
-                    <span>Chính xác trong việc đối chiếu dữ liệu chấm công</span>
-                </li>
-                <li>
-                    <strong>50.000+</strong>
-                    <span>Nhân viên có thể làm quen dễ dàng với phần mềm</span>
-                </li>
-            </ul>
+        <!-- 5. SỐ LIỆU / SOCIAL PROOF (ÁP DỤNG @apply stat-card, stat-number, stat-label) -->
+        <section id="so-lieu" aria-labelledby="solieu-title" class="border-y border-line bg-line/10 py-16">
+            <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20 grid gap-12 lg:grid-cols-2 items-center">
+                <div>
+                    <p class="eyebrow">Hiệu quả kiểm chứng</p>
+                    <h2 id="solieu-title" class="mt-2 text-3xl font-bold sm:text-4xl">
+                        Được tin dùng bởi hơn 600 triệu người dùng và 10.000 đội ngũ
+                    </h2>
+                    <p class="mt-4 text-base leading-relaxed text-muted">
+                        Phần mềm giúp các doanh nghiệp tinh gọn bộ máy hành chính, nâng cao năng suất làm việc và tối ưu hóa chi phí vận hành.
+                    </p>
+                </div>
+                <dl class="grid grid-cols-2 gap-4 sm:gap-6">
+                    <div class="stat-card">
+                        <dd class="stat-number">80%</dd>
+                        <dt class="stat-label">Thời gian tính lương cắt giảm</dt>
+                    </div>
+                    <div class="stat-card">
+                        <dd class="stat-number">100%</dd>
+                        <dt class="stat-label">Chính xác đối soát ca kíp</dt>
+                    </div>
+                    <div class="stat-card">
+                        <dd class="stat-number">50.000+</dd>
+                        <dt class="stat-label">Nhân sự sử dụng mỗi ngày</dt>
+                    </div>
+                    <div class="stat-card">
+                        <dd class="stat-number">99.99%</dd>
+                        <dt class="stat-label">Độ ổn định hệ thống Cloud</dt>
+                    </div>
+                </dl>
+            </div>
         </section>
 
-        <!-- 6. CẢM NHẬN KHÁCH HÀNG / TESTIMONIALS -->
-        <section aria-labelledby="cam-nhan-title">
-            <h2 id="cam-nhan-title">Khách hàng nói gì về chúng tôi</h2>
-            <ul>
-                <li>
-                    <blockquote>
-                        <p>Phần mềm hỗ trợ chấm công chính xác, có nhận diện khuôn mặt lúc chấm công, có thể quản lý tập
-                            trung cho nhiều chi nhánh trên toàn quốc.</p>
-                        <footer>— <cite>Lê Thị Cẩm Tú (Giám đốc HR)</cite></footer>
-                    </blockquote>
-                </li>
-                <li>
-                    <blockquote>
-                        <p>Hệ thống hỗ trợ nhân viên đăng ký ca làm dễ dàng, sắp xếp ca làm hợp lý.</p>
-                        <footer>— <cite>Nguyễn Trần Tuân (Trưởng phòng Nhân sự)</cite></footer>
-                    </blockquote>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 7. BẢNG GIÁ / PRICING -->
-        <section id="bang-gia" aria-labelledby="bang-gia-title">
-            <h2 id="bang-gia-title">Bảng giá linh hoạt cho từng module</h2>
-            <ul>
-                <li>
-                    <h3>Gói Khởi Nghiệp</h3>
-                    <p><strong>20.000.000 VND / nhân viên / tháng</strong></p>
-                    <p>Dành cho doanh nghiệp dưới 30 nhân sự. Đầy đủ tính năng như quản lý hồ sơ nhân viên và chấm công
-                        cơ bản.</p>
-                    <a href="#">Chọn gói Khởi Nghiệp</a>
-                </li>
-                <li>
-                    <h3>Gói Tiêu Chuẩn</h3>
-                    <p><strong>70.000.000 VND / nhân viên / tháng</strong></p>
-                    <p>Dành cho quy mô từ 30 - 150 nhân sự. Bổ sung tính năng tự động tính lương và tự động xếp lịch làm
-                        tự động..</p>
-                    <a href="#">Chọn gói Tiêu Chuẩn</a>
-                </li>
-                <li>
-                    <h3>Gói Doanh Nghiệp</h3>
-                    <p><strong>Liên hệ để nhận báo giá</strong></p>
-                    <p>Dành cho quy mô trên 150 nhân sự. Tùy chỉnh tất cả module, tích hợp ERP và hỗ trợ 24/7.</p>
-                    <a href="#">Đăng ký tư vấn</a>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 8. CÂU HỎI THƯỜNG GẶP / FAQ -->
-        <section id="faq" aria-labelledby="faq-title">
-            <h2 id="faq-title">Câu hỏi thường gặp</h2>
-            <dl>
-                <dt>Phần mềm có kết nối được với máy chấm công hiện tại của công ty không?</dt>
-                <dd>Có, HRManager hỗ trợ kết nối trực tiếp với hầu hết các loại máy chấm công vân tay, thẻ từ và khuôn
-                    mặt hiện nay.</dd>
-
-                <dt>Thời gian triển khai phần mềm mất bao lâu?</dt>
-                <dd>Cài đặt và đồng bộ dữ liệu ban đầu chỉ mất khoảng 10 phút. Đội ngũ kỹ thuật sẽ hỗ trợ hướng dẫn sử
-                    dụng trong ngày.</dd>
-
-                <dt>Dữ liệu nhân sự của công ty tôi có được bảo mật không?</dt>
-                <dd>Tất cả dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động hàng ngày trên hạ tầng đám mây an
-                    toàn.</dd>
-            </dl>
-        </section>
-
-        <!-- 9. CALL TO ACTION / CTA -->
-        <section id="cta" aria-labelledby="cta-title">
-            <h2 id="cta-title">Bắt đầu tối ưu bộ máy nhân sự của bạn ngay hôm nay</h2>
-            <p>Cài đặt mất 10 phút, trải nghiệm full tính năng trong 7 ngày không cần thẻ tín dụng.</p>
-            <form action="#" method="POST">
-                <label for="email-input">Email công việc của bạn</label>
-                <input type="email" id="email-input" name="email" placeholder="nhansu@congty.com" required>
-                <button type="submit">Đăng ký dùng thử</button>
-            </form>
-        </section>
-
+        
     </main>
 
-    <!-- 10. FOOTER -->
-    <footer>
-        <p>Tổng đài tư vấn giải pháp nhân sự: 1900 xxxx (8:00 - 18:00)</p>
-        <nav aria-label="Điều hướng chân trang">
-            <ul>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">Chính sách bảo mật</a></li>
-                <li><a href="#">Điều khoản dịch vụ</a></li>
-                <li><a href="#">Hướng dẫn sử dụng</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2026 HRManager. Tất cả các quyền được bảo lưu.</p>
-    </footer>
+   
 
 </body>
 

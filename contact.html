@@ -20,5 +20,72 @@
             </ul>
         </nav>
     </header>
+
+    <main class="flex flex-col gap-0">
+        <section aria-labelledby="contact-title" class="section grid lg:grid-cols-2 items-start gap-12 lg:gap-16">
+            <div class="flex flex-col gap-4">
+                <p class="eyebrow">Hỗ trợ 24/7</p>
+                <h1 id="contact-title" class="text-4xl lg:text-5xl">Trò chuyện cùng chuyên gia</h1>
+                <p class="text-base text-muted">Hãy để lại thông tin, đội ngũ kỹ sư của HRManager sẽ liên hệ demo trực tiếp cho doanh nghiệp của bạn trong vòng 15 phút.</p>
+            </div>
+
+            <!-- Form chuẩn Accessibility -->
+            <form action="#" method="POST" class="card flex flex-col gap-6 w-full">
+                <!-- 1. Text -->
+                <div class="flex flex-col gap-2">
+                    <label class="field-label" for="ho-ten">
+                        Họ và tên <span class="text-brand-600" aria-hidden="true">*</span>
+                    </label>
+                    <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name">
+                </div>
+
+                <!-- 2. Email -->
+                <div class="flex flex-col gap-2">
+                    <label class="field-label" for="email">
+                        Email công việc <span class="text-brand-600" aria-hidden="true">*</span>
+                    </label>
+                    <input class="field-input" id="email" name="email" type="email" required autocomplete="email">
+                </div>
+
+                <!-- 3. Điện thoại (Đủ 7 thuộc tính) -->
+                <div class="flex flex-col gap-2">
+                    <label class="field-label" for="dien-thoai">
+                        Số điện thoại <span class="text-brand-600" aria-hidden="true">*</span>
+                    </label>
+                    <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required 
+                           pattern="[0-9]{10}" autocomplete="tel" inputmode="numeric" 
+                           aria-describedby="dien-thoai-hint dien-thoai-error">
+                    <p class="field-hint" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
+                    <p class="field-error" id="dien-thoai-error" role="alert">Vui lòng nhập đúng 10 số</p>
+                </div>
+
+                <!-- 4. Select -->
+                <div class="flex flex-col gap-2">
+                    <label class="field-label" for="quy-mo">Quy mô nhân sự</label>
+                    <select class="field-input" id="quy-mo" name="quyMo">
+                        <option value="duoi-30">Dưới 30 người</option>
+                        <option value="30-150">Từ 30 - 150 người</option>
+                        <option value="tren-150">Trên 150 người</option>
+                    </select>
+                </div>
+
+                <!-- 5. Textarea -->
+                <div class="flex flex-col gap-2">
+                    <label class="field-label" for="loi-nhan">Lời nhắn</label>
+                    <textarea class="field-input" id="loi-nhan" name="loiNhan" rows="4"></textarea>
+                </div>
+
+                <!-- 6. Checkbox -->
+                <div class="flex items-center gap-3">
+                    <input id="dong-y" name="dongY" type="checkbox" required class="h-4 w-4 accent-brand-600">
+                    <label for="dong-y" class="text-sm text-ink">
+                        Tôi đồng ý với <a href="#" class="text-brand-600 underline">Chính sách bảo mật</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">Gửi yêu cầu tư vấn</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

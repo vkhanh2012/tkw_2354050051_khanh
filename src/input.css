@@ -51,6 +51,18 @@
     @apply mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-20 py-16 lg:py-14;
   }
 
+  .container-sm {
+    @apply mx-auto max-w-3xl text-center flex flex-col gap-4 items-center;
+  }
+
+   .partner-item {
+    @apply font-display text-lg font-bold text-muted opacity-80 hover:opacity-100 transition-opacity;
+  }
+
+  .feature-item {
+    @apply flex items-center gap-3 text-base text-ink;
+  }
+
   .eyebrow {
     @apply font-display text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600;
   }
@@ -58,21 +70,17 @@
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer;
   }
-
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer bg-brand-600 text-white hover:bg-brand-700;
+    @apply bg-brand-600 text-white hover:bg-brand-700;
   }
-
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer border border-line bg-surface text-ink hover:bg-line/30;
+    @apply border border-line bg-surface text-ink hover:bg-line/30 dark:border-line-invert dark:bg-surface-dark-alt dark:text-ink-invert dark:hover:bg-line-invert/50;
   }
 
-  /* Thẻ Card */
   .card {
     @apply rounded-card border border-line bg-surface p-6 shadow-sm dark:border-line-invert dark:bg-surface-dark-alt;
   }
 
-  /* 7, 8, 9, 10. Hệ thống Form liên hệ chuẩn Accessibility */
   .field-label {
     @apply block text-sm font-medium text-ink dark:text-ink-invert;
   }
@@ -83,6 +91,7 @@
     @apply text-xs text-muted dark:text-muted-invert;
   }
   .field-error {
-    @apply text-xs text-brand-600 hidden; /* Sẽ được bật bằng JS sau này nếu có lỗi */
+    @apply text-xs text-brand-600 hidden;
   }
+  
 }

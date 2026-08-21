@@ -15,11 +15,11 @@
   --color-line: #ffdee0;
 
   /* màu darkmode */
-  --color-ink-invert: #e5e7eb;
-  --color-muted-invert: #9ca3af;
-  --color-surface-dark: #141414;
-  --color-surface-dark-alt: #1f1f1f;
-  --color-line-invert: #374151;
+ --color-ink-invert: #f9fafb;       
+  --color-muted-invert: #d1d5db;     
+  --color-surface-dark: #141414;    
+  --color-surface-dark-alt: #1f1f1f; 
+  --color-line-invert: #374151;   
 
   /* font chữ */
   --font-display: "Be Vietnam Pro", sans-serif;
@@ -55,12 +55,12 @@
     @apply mx-auto max-w-3xl text-center flex flex-col gap-4 items-center;
   }
 
-   .partner-item {
-    @apply font-display text-lg font-bold text-muted opacity-80 hover:opacity-100 transition-opacity;
+  .partner-item {
+    @apply font-display text-lg font-bold text-muted dark:text-muted-invert opacity-80 hover:opacity-100 hover:text-brand-600 dark:hover:text-white transition-all;
   }
 
   .feature-item {
-    @apply flex items-center gap-3 text-base text-ink;
+    @apply flex items-center gap-3 text-base text-ink dark:text-ink-invert;
   }
 
   .eyebrow {

@@ -1,0 +1,1 @@
+# HRManager - Quản lý nhân sự toàn diện

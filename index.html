@@ -17,35 +17,28 @@
 <body>
 
     <!-- 1. NAVBAR -->
-    <header
-        class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md dark:border-line-invert dark:bg-surface-dark/90">
-        <nav aria-label="Điều hướng chính"
-            class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
-            <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
-                HRManager
+    <header class="sticky top-0 z-50 w-full border-b border-line dark:border-line-invert bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md">
+    <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
+        <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
+            HRManager
+        </a>
+        <ul class="hidden items-center gap-8 md:flex">
+            <li><a href="#company" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Company</a></li>
+            <li><a href="#marketplace" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Marketplace</a></li>
+            <li><a href="#tinh-nang" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Features</a></li>
+            <li><a href="#team" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Team</a></li>
+            <li><a href="#contact" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <a href="#cta" class="text-sm font-semibold text-ink dark:text-ink-invert transition-colors hover:text-brand-600 dark:hover:text-white">
+                Log In
             </a>
-            <ul class="hidden items-center gap-8 md:flex">
-                <li><a href="#company"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
-                <li><a href="#marketplace"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
-                <li><a href="#tinh-nang"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
-                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a>
-                </li>
-                <li><a href="#contact"
-                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
-            </ul>
-            <div class="flex items-center gap-4">
-                <a href="#cta" class="text-sm font-semibold text-ink transition-colors hover:text-brand-600">
-                    Log In
-                </a>
-                <a href="#cta" class="btn btn-primary">
-                    Get started
-                </a>
-            </div>
-        </nav>
-    </header>
+            <a href="#cta" class="btn btn-primary">
+                Get started
+            </a>
+        </div>
+    </nav>
+</header>
 
     <main id="main">
         <!-- 2. HERO SECTION -->

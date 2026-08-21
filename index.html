@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -9,23 +9,32 @@
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- 1. NAVBAR -->
-    <header class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md">
-        <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
+    <header
+        class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md dark:border-line-invert dark:bg-surface-dark/90">
+        <nav aria-label="Điều hướng chính"
+            class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
             <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
                 HRManager
             </a>
             <ul class="hidden items-center gap-8 md:flex">
-                <li><a href="#company" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
-                <li><a href="#marketplace" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
-                <li><a href="#tinh-nang" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
-                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a></li>
-                <li><a href="#contact" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
+                <li><a href="#company"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Company</a></li>
+                <li><a href="#marketplace"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Marketplace</a></li>
+                <li><a href="#tinh-nang"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
+                <li><a href="#team" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Team</a>
+                </li>
+                <li><a href="#contact"
+                        class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Contact</a></li>
             </ul>
             <div class="flex items-center gap-4">
                 <a href="#cta" class="text-sm font-semibold text-ink transition-colors hover:text-brand-600">
@@ -46,11 +55,11 @@
                     Tự động hóa quản lý nhân sự, tiết kiệm thời gian, nâng cao hiệu quả
                 </h1>
 
-                <p class="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+                <p class="text-base leading-relaxed text-muted dark:text-muted-invert sm:text-lg">
                     Chấm công chính xác, tự động hóa bảng lương và quản lý hồ sơ nhân sự tập trung trên một nền tảng.
                 </p>
 
-                <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
                     <a href="#bang-gia" class="btn btn-primary text-base px-6 py-3">
                         Trải nghiệm miễn phí
                     </a>
@@ -62,14 +71,16 @@
 
             <div class="flex justify-center">
                 <img src="assets/img/hero_section.png" alt="Giao diện bảng điều khiển quản lý nhân sự HRManager"
-                    class="w-full max-w-lg rounded-card border border-line shadow-lg">
+                    class="w-full max-w-lg rounded-card border border-line dark:border-line-invert shadow-lg">
             </div>
         </section>
 
         <!-- 3. CUSTOMER LOGOS / DẢI KHÁCH HÀNG (ÁP DỤNG @apply partner-item) -->
-        <section aria-labelledby="doi-tac-title" class="border-y border-line bg-surface py-12 lg:py-16">
-            <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20">
-                <h2 id="doi-tac-title" class="text-center text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm">
+        <section aria-labelledby="doi-tac-title"
+            class="border-y border-line dark:border-line-invert bg-surface dark:bg-surface-dark py-12 lg:py-16">
+            <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20 flex flex-col gap-8">
+                <h2 id="doi-tac-title"
+                    class="text-center text-xs font-semibold uppercase tracking-wider text-muted sm:text-sm dark:text-muted-invert">
                     Được tin dùng bởi nhiều doanh nghiệp ở thành phố Hồ Chí Minh
                 </h2>
                 <ul class="mt-8 flex flex-wrap items-center justify-between gap-x-12 gap-y-6">
@@ -82,80 +93,109 @@
         </section>
 
         <!-- 4. TÍNH NĂNG / FEATURES (ÁP DỤNG @apply eyebrow, card, feature-item, check-icon) -->
-        <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section">
-            <div class="max-w-2xl">
-                <p class="eyebrow">Tính năng</p>
-                <h2 id="tinh-nang-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Các tính năng cốt lõi</h2>
-                <p class="mt-4 text-base leading-relaxed text-muted">
-                    Không có tính năng thừa. Tự động hóa toàn bộ quy trình chấm công, tính lương và phân ca kíp phức tạp chỉ trên một nền tảng duy nhất.
-                </p>
+        <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section flex flex-col gap-24">
+            <div class=flex flex-col gap-14">
+                <div class="max-w-2xl flex flex-col gap-4">
+                    <p class="eyebrow">Tính năng</p>
+                    <h2 id="tinh-nang-title" class="mt-2 text-3xl font-extrabold sm:text-4xl">Các tính năng cốt lõi</h2>
+                    <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
+                        Không có tính năng thừa. Tự động hóa toàn bộ quy trình chấm công, tính lương và phân ca kíp phức
+                        tạp chỉ trên một nền tảng duy nhất.
+                    </p>
+                </div>
             </div>
-            
+
             <!-- 3 Card tính năng gốc -->
             <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                <li class="card">
+                <li class="card flex flex-col gap-2">
                     <h3 class="text-xl font-semibold">Quản lý hồ sơ nhân sự tập trung</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted">
-                        Lưu trữ toàn bộ thông tin hợp đồng, quá trình công tác và đánh giá hiệu suất của nhân viên an toàn trên Cloud.
+                    <p class="mt-2 text-sm leading-relaxed text-muted dark:text-muted-invert">
+                        Lưu trữ toàn bộ thông tin hợp đồng, quá trình công tác và đánh giá hiệu suất của nhân viên an
+                        toàn trên Cloud.
                     </p>
                 </li>
                 <li class="card">
                     <h3 class="text-xl font-semibold">Chấm công & Tính lương tự động</h3>
                     <p class="mt-2 text-sm leading-relaxed text-muted">
-                        Tích hợp máy chấm công khuôn mặt, tự động tổng hợp công và xuất bảng lương chính xác chỉ trong 5 phút.
+                        Tích hợp máy chấm công khuôn mặt, tự động tổng hợp công và xuất bảng lương chính xác chỉ trong 5
+                        phút.
                     </p>
                 </li>
-                <li class="card">
+                <li class="card flex flex-col gap-2">
                     <h3 class="text-xl font-semibold">Đánh giá hiệu suất KPI & MBO</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted">
+                    <p class="mt-2 text-sm leading-relaxed text-muted dark:text-muted-invert">
                         Thiết lập mục tiêu, theo dõi tiến độ công việc và đánh giá năng lực nhân viên minh bạch theo kỳ.
                     </p>
                 </li>
             </ul>
 
             <!-- Khối so le 1 theo Figma: Chữ trái - Minh họa phải -->
-            <div class="mt-24 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-                <div>
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                <div class="flex flex-col gap-4">
                     <h3 class="text-3xl font-bold sm:text-4xl">Làm việc với các công cụ bạn đã quen dùng</h3>
-                    <p class="mt-4 text-base leading-relaxed text-muted">
-                        Kết nối mượt mà với hệ sinh thái kế toán, thuế và ngân hàng hiện tại của doanh nghiệp mà không cần thay đổi quy trình vận hành sẵn có.
+                    <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
+                        Kết nối mượt mà với hệ sinh thái kế toán, thuế và ngân hàng hiện tại của doanh nghiệp mà không
+                        cần thay đổi quy trình vận hành sẵn có.
                     </p>
-                    <ul class="mt-6 space-y-4 border-t border-line pt-6">
+                    <ul class="flex flex-col gap-4 border-t border-line dark:border-line-invert pt-6">
                         <li class="feature-item">
-                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                             Tự động đồng bộ ca kíp với máy chấm công
                         </li>
                         <li class="feature-item">
-                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                             Quy trình duyệt đơn từ trực tuyến
                         </li>
                         <li class="feature-item">
-                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                             Quản lý hồ sơ nhân sự an toàn
                         </li>
                     </ul>
                 </div>
-                <div class="card bg-line/10 p-6">
+                <div class="card bg-line/10 dark:bg-surface-dark-alt p-6">
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="h-36 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Báo cáo nhân sự</div>
-                        <div class="h-36 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Lịch ca làm việc</div>
+                        <div
+                            class="h-36 rounded-card border border-line dark:border-line-invert bg-surface dark:bg-surface-dark flex items-center justify-center text-xs text-muted dark:text-muted-invert font-medium">
+                            Báo cáo nhân sự</div>
+                        <div
+                            class="h-36 rounded-card border border-line dark:border-line-invert bg-surface dark:bg-surface-dark flex items-center justify-center text-xs text-muted dark:text-muted-invert font-medium">
+                            Lịch ca làm việc</div>
                     </div>
                 </div>
             </div>
 
             <!-- Khối so le 2 theo Figma: Minh họa trái - Chữ phải -->
-            <div class="mt-24 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-                <div class="order-2 lg:order-1 card bg-line/10 p-6">
-                    <div class="h-48 rounded-card border border-line bg-surface flex items-center justify-center text-xs text-muted font-medium">Bản đồ phân bổ chi nhánh toàn quốc</div>
+            <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                <div class="order-2 lg:order-1 card bg-line/10 dark:bg-surface-dark-alt p-6">
+                    <div
+                        class="h-48 rounded-card border border-line dark:border-line-invert bg-surface dark:bg-surface-dark flex items-center justify-center text-xs text-muted dark:text-muted-invert font-medium">
+                        Bản đồ phân bổ chi nhánh toàn quốc</div>
                 </div>
-                <div class="order-1 lg:order-2">
+                <div class="order-1 lg:order-2 flex flex-col gap-4">
                     <h3 class="text-3xl font-bold sm:text-4xl">Sẵn sàng mở rộng quy mô cùng doanh nghiệp</h3>
-                    <p class="mt-4 text-base leading-relaxed text-muted">
-                        Hệ thống hoạt động ổn định và hỗ trợ quản lý tập trung từ doanh nghiệp 20 nhân sự đến chuỗi hàng trăm chi nhánh trên toàn quốc.
+                    <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
+                        Hệ thống hoạt động ổn định và hỗ trợ quản lý tập trung từ doanh nghiệp 20 nhân sự đến chuỗi hàng
+                        trăm chi nhánh trên toàn quốc.
                     </p>
-                    <ul class="mt-6 space-y-4 border-t border-line pt-6">
+                    <ul class="flex flex-col gap-4 border-t border-line dark:border-line-invert pt-6">
                         <li class="feature-item">
-                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <svg class="check-icon" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
                             Báo cáo phân tích dữ liệu đa chiều thời gian thực
                         </li>
                     </ul>
@@ -163,34 +203,34 @@
             </div>
         </section>
 
-        <!-- 5. SỐ LIỆU / SOCIAL PROOF (ÁP DỤNG @apply stat-card, stat-number, stat-label) -->
-        <section id="so-lieu" aria-labelledby="solieu-title" class="border-y border-line bg-line/10 py-16">
+        <!-- 5. SỐ LIỆU / SOCIAL PROOF -->
+        <section id="so-lieu" aria-labelledby="solieu-title" class="border-y border-line dark:border-line-invert bg-line/10 dark:bg-surface-dark-alt py-16">
             <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20 grid gap-12 lg:grid-cols-2 items-center">
-                <div>
+                <div class="flex flex-col gap-4">
                     <p class="eyebrow">Hiệu quả kiểm chứng</p>
-                    <h2 id="solieu-title" class="mt-2 text-3xl font-bold sm:text-4xl">
+                    <h2 id="solieu-title" class="text-3xl font-bold sm:text-4xl">
                         Được tin dùng bởi hơn 600 triệu người dùng và 10.000 đội ngũ
                     </h2>
-                    <p class="mt-4 text-base leading-relaxed text-muted">
+                    <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
                         Phần mềm giúp các doanh nghiệp tinh gọn bộ máy hành chính, nâng cao năng suất làm việc và tối ưu hóa chi phí vận hành.
                     </p>
                 </div>
                 <dl class="grid grid-cols-2 gap-4 sm:gap-6">
-                    <div class="stat-card">
-                        <dd class="stat-number">80%</dd>
-                        <dt class="stat-label">Thời gian tính lương cắt giảm</dt>
+                    <div class="card text-center flex flex-col gap-2">
+                        <dd class="font-display text-3xl font-extrabold text-brand-600 sm:text-4xl">80%</dd>
+                        <dt class="text-sm text-muted dark:text-muted-invert font-medium">Thời gian tính lương cắt giảm</dt>
                     </div>
-                    <div class="stat-card">
-                        <dd class="stat-number">100%</dd>
-                        <dt class="stat-label">Chính xác đối soát ca kíp</dt>
+                    <div class="card text-center flex flex-col gap-2">
+                        <dd class="font-display text-3xl font-extrabold text-brand-600 sm:text-4xl">100%</dd>
+                        <dt class="text-sm text-muted dark:text-muted-invert font-medium">Chính xác đối soát ca kíp</dt>
                     </div>
-                    <div class="stat-card">
-                        <dd class="stat-number">50.000+</dd>
-                        <dt class="stat-label">Nhân sự sử dụng mỗi ngày</dt>
+                    <div class="card text-center flex flex-col gap-2">
+                        <dd class="font-display text-3xl font-extrabold text-brand-600 sm:text-4xl">50.000+</dd>
+                        <dt class="text-sm text-muted dark:text-muted-invert font-medium">Nhân sự sử dụng mỗi ngày</dt>
                     </div>
-                    <div class="stat-card">
-                        <dd class="stat-number">99.99%</dd>
-                        <dt class="stat-label">Độ ổn định hệ thống Cloud</dt>
+                    <div class="card text-center flex flex-col gap-2">
+                        <dd class="font-display text-3xl font-extrabold text-brand-600 sm:text-4xl">99.99%</dd>
+                        <dt class="text-sm text-muted dark:text-muted-invert font-medium">Độ ổn định hệ thống Cloud</dt>
                     </div>
                 </dl>
             </div>
@@ -199,116 +239,123 @@
         <!-- 6. TESTIMONIALS / CẢM NHẬN KHÁCH HÀNG -->
         <section aria-labelledby="cam-nhan-title" class="section text-center">
             <h2 id="cam-nhan-title" class="sr-only">Đánh giá từ khách hàng doanh nghiệp</h2>
-            <figure class="mx-auto flex max-w-4xl flex-col items-center">
+            <figure class="mx-auto flex max-w-4xl flex-col items-center gap-6">
                 <svg class="h-10 w-10 text-brand-600/30" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
-                <blockquote class="mt-6 font-display text-xl font-bold leading-relaxed text-ink sm:text-2xl">
+                <blockquote class="font-display text-xl font-bold leading-relaxed text-ink dark:text-ink-invert sm:text-2xl">
                     "HRManager là giải pháp tuyệt vời cho chuỗi cửa hàng của chúng tôi. Phần mềm hỗ trợ chấm công chính xác bằng nhận diện khuôn mặt và quản lý tập trung toàn bộ 20 chi nhánh chỉ trên một màn hình."
                 </blockquote>
-                <figcaption class="mt-6 flex items-center justify-center gap-3 text-sm">
-                    <span class="font-bold text-ink">Lê Thị Cẩm Tú</span>
-                    <span class="text-line" aria-hidden="true">•</span>
-                    <cite class="not-italic text-muted">Giám đốc Nhân sự (HRD) - Chuỗi Undy</cite>
+                <figcaption class="flex items-center justify-center gap-3 text-sm">
+                    <span class="font-bold text-ink dark:text-ink-invert">Lê Thị Cẩm Tú</span>
+                    <span class="text-line dark:text-line-invert" aria-hidden="true">•</span>
+                    <cite class="not-italic text-muted dark:text-muted-invert">Giám đốc Nhân sự (HRD) - Chuỗi Undy</cite>
                 </figcaption>
             </figure>
         </section>
-        \ <!-- 7. PRICING / BẢNG GIÁ (ÁP DỤNG @apply container-sm, pricing-card, price-amount, price-unit, price-feature-item) -->
-        <section id="bang-gia" aria-labelledby="bang-gia-title" class="section border-t border-line">
+
+        <!-- 7. PRICING / BẢNG GIÁ -->
+        <section id="bang-gia" aria-labelledby="bang-gia-title" class="section border-t border-line dark:border-line-invert flex flex-col gap-14">
             <div class="container-sm">
                 <p class="eyebrow">Bảng giá minh bạch</p>
-                <h2 id="bang-gia-title" class="mt-2 text-3xl font-bold sm:text-4xl">
+                <h2 id="bang-gia-title" class="text-3xl font-bold sm:text-4xl">
                     Lựa chọn gói dịch vụ phù hợp với quy mô
                 </h2>
-                <p class="mt-4 text-base leading-relaxed text-muted">
+                <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
                     Không phí ẩn, dễ dàng nâng cấp khi doanh nghiệp mở rộng quy mô nhân sự.
                 </p>
             </div>
 
-            <ul class="mt-14 grid items-stretch gap-8 lg:grid-cols-3">
-                <!-- Thẻ 1 -->
-                <li class="pricing-card">
-                    <h3 class="text-xl font-bold">Gói Khởi Nghiệp</h3>
-                    <p class="mt-2 text-sm text-muted">Doanh nghiệp dưới 30 nhân sự.</p>
-                    <div class="my-6">
-                        <span class="price-amount">20.000đ</span>
-                        <span class="price-unit">/nhân viên/tháng</span>
+            <ul class="grid items-stretch gap-8 lg:grid-cols-3">
+                <li class="card flex flex-col text-center gap-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xl font-bold">Gói Khởi Nghiệp</h3>
+                        <p class="text-sm text-muted dark:text-muted-invert">Doanh nghiệp dưới 30 nhân sự.</p>
                     </div>
-                    <ul class="mb-8 space-y-3 text-left">
-                        <li class="price-feature-item">✓ Quản lý hồ sơ nhân sự cơ bản</li>
-                        <li class="price-feature-item">✓ Chấm công điện thoại GPS</li>
-                        <li class="price-feature-item">✓ Xuất bảng công Excel</li>
+                    <div class="flex flex-col gap-1 py-6">
+                        <span class="font-display text-4xl font-extrabold text-ink dark:text-ink-invert">20.000đ</span>
+                        <span class="text-xs text-muted dark:text-muted-invert">/nhân viên/tháng</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 text-left pb-8 flex-1">
+                        <li class="feature-item">✓ Quản lý hồ sơ nhân sự cơ bản</li>
+                        <li class="feature-item">✓ Chấm công điện thoại GPS</li>
+                        <li class="feature-item">✓ Xuất bảng công Excel</li>
                     </ul>
-                    <a href="#cta" class="btn btn-primary mt-auto w-full">Chọn gói Khởi Nghiệp</a>
+                    <a href="contact.html" class="btn btn-secondary w-full">Chọn gói Khởi Nghiệp</a>
                 </li>
 
-                <!-- Thẻ 2 (Nổi bật) -->
-                <li class="pricing-card ring-2 ring-brand-600 shadow-xl">
-                    <h3 class="text-xl font-bold">Gói Tiêu Chuẩn</h3>
-                    <p class="mt-2 text-sm text-muted">Doanh nghiệp từ 30 – 150 nhân sự.</p>
-                    <div class="my-6">
-                        <span class="price-amount text-brand-600">50.000đ</span>
-                        <span class="price-unit">/nhân viên/tháng</span>
+                <li class="card relative flex flex-col text-center gap-6 ring-2 ring-brand-600 shadow-xl">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-3 py-1 text-xs font-bold text-white uppercase tracking-wider">Phổ biến</span>
+                    <div class="flex flex-col gap-2 pt-2">
+                        <h3 class="text-xl font-bold">Gói Tiêu Chuẩn</h3>
+                        <p class="text-sm text-muted dark:text-muted-invert">Doanh nghiệp từ 30 – 150 nhân sự.</p>
                     </div>
-                    <ul class="mb-8 space-y-3 text-left">
-                        <li class="price-feature-item">✓ Toàn bộ tính năng Khởi Nghiệp</li>
-                        <li class="price-feature-item">✓ Tự động hóa tính lương 1-Click</li>
-                        <li class="price-feature-item">✓ Xếp ca kíp tự động thông minh</li>
-                        <li class="price-feature-item">✓ Hỗ trợ kỹ thuật ưu tiên</li>
+                    <div class="flex flex-col gap-1 py-6">
+                        <span class="font-display text-4xl font-extrabold text-brand-600">50.000đ</span>
+                        <span class="text-xs text-muted dark:text-muted-invert">/nhân viên/tháng</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 text-left pb-8 flex-1">
+                        <li class="feature-item">✓ Toàn bộ tính năng Khởi Nghiệp</li>
+                        <li class="feature-item">✓ Tự động hóa tính lương 1-Click</li>
+                        <li class="feature-item">✓ Xếp ca kíp tự động thông minh</li>
+                        <li class="feature-item">✓ Hỗ trợ kỹ thuật ưu tiên</li>
                     </ul>
-                    <a href="#cta" class="btn btn-primary mt-auto w-full">Chọn gói Tiêu Chuẩn</a>
+                    <a href="contact.html" class="btn btn-primary w-full">Chọn gói Tiêu Chuẩn</a>
                 </li>
 
-                <!-- Thẻ 3 -->
-                <li class="pricing-card">
-                    <h3 class="text-xl font-bold">Gói Doanh Nghiệp</h3>
-                    <p class="mt-2 text-sm text-muted">Quy mô trên 150 nhân sự hoặc chuỗi.</p>
-                    <div class="my-6">
-                        <span class="price-amount">Liên hệ</span>
-                        <span class="price-unit">/báo giá theo nhu cầu</span>
+                <li class="card flex flex-col text-center gap-6">
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-xl font-bold">Gói Doanh Nghiệp</h3>
+                        <p class="text-sm text-muted dark:text-muted-invert">Quy mô trên 150 nhân sự hoặc chuỗi.</p>
                     </div>
-                    <ul class="mb-8 space-y-3 text-left">
-                        <li class="price-feature-item">✓ Toàn bộ tính năng không giới hạn</li>
-                        <li class="price-feature-item">✓ Tích hợp ERP & Kế toán riêng</li>
-                        <li class="price-feature-item">✓ Hỗ trợ kỹ thuật 24/7 SLA</li>
+                    <div class="flex flex-col gap-1 py-6">
+                        <span class="font-display text-4xl font-extrabold text-ink dark:text-ink-invert">Liên hệ</span>
+                        <span class="text-xs text-muted dark:text-muted-invert">/báo giá theo nhu cầu</span>
+                    </div>
+                    <ul class="flex flex-col gap-3 text-left pb-8 flex-1">
+                        <li class="feature-item">✓ Toàn bộ tính năng không giới hạn</li>
+                        <li class="feature-item">✓ Tích hợp ERP & Kế toán riêng</li>
+                        <li class="feature-item">✓ Hỗ trợ kỹ thuật 24/7 SLA</li>
                     </ul>
-                    <a href="#cta" class="btn btn-primary mt-auto w-full">Đăng ký tư vấn</a>
+                    <a href="contact.html" class="btn btn-secondary w-full">Đăng ký tư vấn</a>
                 </li>
             </ul>
         </section>
 
-         <!-- 8. FAQ / CÂU HỎI THƯỜNG GẶP -->
-        <section id="faq" aria-labelledby="faq-title" class="section border-t border-line">
+        <!-- 8. FAQ / CÂU HỎI THƯỜNG GẶP -->
+        <section id="faq" aria-labelledby="faq-title" class="section border-t border-line dark:border-line-invert flex flex-col gap-12">
             <div class="container-sm">
                 <h2 id="faq-title" class="text-3xl font-bold sm:text-4xl">Câu hỏi thường gặp</h2>
-                <p class="mt-4 text-base text-muted">Những thắc mắc phổ biến của các nhà quản trị khi tìm hiểu về HRManager.</p>
+                <p class="text-base text-muted dark:text-muted-invert">Những thắc mắc phổ biến của các nhà quản trị khi tìm hiểu về HRManager.</p>
             </div>
-            <dl class="mx-auto mt-12 max-w-4xl divide-y divide-line border-y border-line">
-                <div class="py-6">
-                    <dt class="text-lg font-semibold text-ink">Phần mềm có kết nối được với máy chấm công hiện tại của công ty không?</dt>
-                    <dd class="mt-2 text-sm leading-relaxed text-muted">Có, HRManager hỗ trợ kết nối trực tiếp với hơn 95% các loại máy chấm công vân tay, thẻ từ và khuôn mặt phổ biến hiện nay qua cổng API bảo mật.</dd>
+            <dl class="mx-auto w-full max-w-4xl flex flex-col divide-y divide-line dark:divide-line-invert border-y border-line dark:border-line-invert">
+                <div class="py-6 flex flex-col gap-2">
+                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Phần mềm có kết nối được với máy chấm công hiện tại của công ty không?</dt>
+                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Có, HRManager hỗ trợ kết nối trực tiếp với hơn 95% các loại máy chấm công vân tay, thẻ từ và khuôn mặt phổ biến hiện nay qua cổng API bảo mật.</dd>
                 </div>
-                <div class="py-6">
-                    <dt class="text-lg font-semibold text-ink">Thời gian triển khai phần mềm cho chuỗi cửa hàng mất bao lâu?</dt>
-                    <dd class="mt-2 text-sm leading-relaxed text-muted">Cài đặt và đồng bộ dữ liệu ban đầu chỉ mất khoảng 10 phút. Đội ngũ kỹ thuật của HRManager sẽ hỗ trợ hướng dẫn nhân viên sử dụng trực tiếp trong ngày.</dd>
+                <div class="py-6 flex flex-col gap-2">
+                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Thời gian triển khai phần mềm cho chuỗi cửa hàng mất bao lâu?</dt>
+                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Cài đặt và đồng bộ dữ liệu ban đầu chỉ mất khoảng 10 phút. Đội ngũ kỹ thuật của HRManager sẽ hỗ trợ hướng dẫn nhân viên sử dụng trực tiếp trong ngày.</dd>
                 </div>
-                <div class="py-6">
-                    <dt class="text-lg font-semibold text-ink">Dữ liệu nhân sự và bảng lương của công ty có được bảo mật không?</dt>
-                    <dd class="mt-2 text-sm leading-relaxed text-muted">Tất cả dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động hàng ngày trên hạ tầng đám mây đạt tiêu chuẩn an ninh quốc tế ISO 27001.</dd>
+                <div class="py-6 flex flex-col gap-2">
+                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Dữ liệu nhân sự và bảng lương của công ty có được bảo mật không?</dt>
+                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Tất cả dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động hàng ngày trên hạ tầng đám mây đạt tiêu chuẩn an ninh quốc tế ISO 27001.</dd>
                 </div>
             </dl>
         </section>
 
-         <!-- 9. CTA / KÊU GỌI HÀNH ĐỘNG -->
-        <section id="cta" aria-labelledby="cta-title" class="border-t border-line bg-line/10 py-16 text-center">
-            <div class="mx-auto max-w-3xl px-5">
-                <h2 id="cta-title" class="text-3xl font-extrabold sm:text-4xl">
-                    Bắt đầu tối ưu bộ máy nhân sự ngay hôm nay
-                </h2>
-                <p class="mt-4 text-base text-muted">
-                    Trải nghiệm miễn phí 30 ngày đầy đủ tính năng. Không yêu cầu thẻ tín dụng.
-                </p>
-                <div class="mt-8 flex justify-center">
+        <!-- 9. CTA / KÊU GỌI HÀNH ĐỘNG -->
+        <section id="cta" aria-labelledby="cta-title" class="border-t border-line dark:border-line-invert bg-line/10 dark:bg-surface-dark-alt py-16 text-center">
+            <div class="mx-auto max-w-3xl px-5 flex flex-col gap-8 items-center">
+                <div class="flex flex-col gap-4">
+                    <h2 id="cta-title" class="text-3xl font-extrabold sm:text-4xl">
+                        Bắt đầu tối ưu bộ máy nhân sự ngay hôm nay
+                    </h2>
+                    <p class="text-base text-muted dark:text-muted-invert">
+                        Trải nghiệm miễn phí 30 ngày đầy đủ tính năng. Không yêu cầu thẻ tín dụng.
+                    </p>
+                </div>
+                <div class="flex justify-center">
                     <a href="#bang-gia" class="btn btn-primary px-8 py-3.5 text-base">
                         Dùng thử miễn phí 30 ngày
                     </a>
@@ -316,104 +363,88 @@
             </div>
         </section>
 
-        <section id="cach-hoat-dong" aria-labelledby="cachhoatdong-title" class="section border-t border-line">
+        <section id="cach-hoat-dong" aria-labelledby="cachhoatdong-title" class="section border-t border-line dark:border-line-invert flex flex-col gap-14">
             <div class="container-sm">
                 <p class="eyebrow">Quy trình đơn giản</p>
-                <h2 id="cachhoatdong-title" class="mt-2 text-3xl font-bold sm:text-4xl">
+                <h2 id="cachhoatdong-title" class="text-3xl font-bold sm:text-4xl">
                     Cách thức vận hành trong 3 bước
                 </h2>
-                <p class="mt-4 text-base leading-relaxed text-muted">
+                <p class="text-base leading-relaxed text-muted dark:text-muted-invert">
                     Dễ dàng đưa vào hoạt động ngay trong ngày làm việc đầu tiên mà không làm gián đoạn bộ máy.
                 </p>
             </div>
 
-            <ol class="mt-14 grid gap-6 sm:grid-cols-3">
-                <li class="card">
-                    <span class="step-number">01</span>
-                    <h3 class="mt-3 text-lg font-semibold">Tải lên danh sách nhân sự</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted">Nhập trực tiếp danh sách nhân viên từ file Excel và thiết lập sơ đồ phòng ban chỉ với 1 cú nhấp chuột.</p>
+            <ol class="grid gap-6 sm:grid-cols-3">
+                <li class="card flex flex-col gap-3">
+                    <span class="font-display text-3xl font-black text-brand-600">01</span>
+                    <h3 class="text-lg font-semibold">Tải lên danh sách nhân sự</h3>
+                    <p class="text-sm leading-relaxed text-muted dark:text-muted-invert">Nhập trực tiếp danh sách nhân viên từ file Excel và thiết lập sơ đồ phòng ban chỉ với 1 cú nhấp chuột.</p>
                 </li>
-                <li class="card">
-                    <span class="step-number">02</span>
-                    <h3 class="mt-3 text-lg font-semibold">Phân ca và kết nối máy công</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted">Cài đặt lịch làm việc theo chu kỳ và đồng bộ dữ liệu chấm công từ các chi nhánh theo thời gian thực.</p>
+                <li class="card flex flex-col gap-3">
+                    <span class="font-display text-3xl font-black text-brand-600">02</span>
+                    <h3 class="text-lg font-semibold">Phân ca và kết nối máy công</h3>
+                    <p class="text-sm leading-relaxed text-muted dark:text-muted-invert">Cài đặt lịch làm việc theo chu kỳ và đồng bộ dữ liệu chấm công từ các chi nhánh theo thời gian thực.</p>
                 </li>
-                <li class="card">
-                    <span class="step-number">03</span>
-                    <h3 class="mt-3 text-lg font-semibold">Xuất bảng lương tự động</h3>
-                    <p class="mt-2 text-sm leading-relaxed text-muted">Hệ thống tự động tổng hợp công, trừ bảo hiểm và gửi phiếu lương bảo mật qua email cho từng nhân viên.</p>
+                <li class="card flex flex-col gap-3">
+                    <span class="font-display text-3xl font-black text-brand-600">03</span>
+                    <h3 class="text-lg font-semibold">Xuất bảng lương tự động</h3>
+                    <p class="text-sm leading-relaxed text-muted dark:text-muted-invert">Hệ thống tự động tổng hợp công, trừ bảo hiểm và gửi phiếu lương bảo mật qua email cho từng nhân viên.</p>
                 </li>
             </ol>
         </section>
+    </main>
 
-
-
-
-
-
-
-<footer class="border-t border-line bg-surface py-16">
+    <!-- 10. FOOTER -->
+    <footer class="border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark py-16 flex flex-col gap-12">
         <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20 grid grid-cols-2 gap-8 md:grid-cols-5">
-            <!-- Cột 1 -->
-            <div class="col-span-2 md:col-span-1">
+            <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
                 <a href="#" class="font-display text-xl font-bold text-brand-600">HRManager</a>
-                <p class="mt-4 text-sm text-muted leading-relaxed">
+                <p class="text-sm text-muted dark:text-muted-invert leading-relaxed">
                     Giải pháp chuyển đổi số nhân sự toàn diện cho doanh nghiệp Việt Nam.
                 </p>
             </div>
 
-            <!-- Cột 2 -->
-            <nav aria-labelledby="footer-product">
-                <h3 id="footer-product" class="footer-heading">Sản phẩm</h3>
-                <ul class="mt-4 space-y-2">
-                    <li><a href="#tinh-nang" class="footer-link">Chấm công GPS</a></li>
-                    <li><a href="#tinh-nang" class="footer-link">Tính lương 1-Click</a></li>
-                    <li><a href="#bang-gia" class="footer-link">Bảng giá dịch vụ</a></li>
+            <nav aria-labelledby="footer-product" class="flex flex-col gap-4">
+                <h3 id="footer-product" class="font-display text-sm font-semibold uppercase text-ink dark:text-ink-invert">Sản phẩm</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#tinh-nang" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Chấm công GPS</a></li>
+                    <li><a href="#tinh-nang" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Tính lương 1-Click</a></li>
+                    <li><a href="pricing.html" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Bảng giá dịch vụ</a></li>
                 </ul>
             </nav>
 
-            <!-- Cột 3 -->
-            <nav aria-labelledby="footer-support">
-                <h3 id="footer-support" class="footer-heading">Hỗ trợ</h3>
-                <ul class="mt-4 space-y-2">
-                    <li><a href="#faq" class="footer-link">Câu hỏi thường gặp</a></li>
-                    <li><a href="#cach-hoat-dong" class="footer-link">Quy trình triển khai</a></li>
-                    <li><a href="#" class="footer-link">Tài liệu API</a></li>
+            <nav aria-labelledby="footer-support" class="flex flex-col gap-4">
+                <h3 id="footer-support" class="font-display text-sm font-semibold uppercase text-ink dark:text-ink-invert">Hỗ trợ</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#faq" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Câu hỏi thường gặp</a></li>
+                    <li><a href="#cach-hoat-dong" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Quy trình triển khai</a></li>
+                    <li><a href="#" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Tài liệu API</a></li>
                 </ul>
             </nav>
 
-            <!-- Cột 4 -->
-            <nav aria-labelledby="footer-company">
-                <h3 id="footer-company" class="footer-heading">Công ty</h3>
-                <ul class="mt-4 space-y-2">
-                    <li><a href="#" class="footer-link">Về chúng tôi</a></li>
-                    <li><a href="#" class="footer-link">Tuyển dụng</a></li>
-                    <li><a href="#" class="footer-link">Chính sách bảo mật</a></li>
+            <nav aria-labelledby="footer-company" class="flex flex-col gap-4">
+                <h3 id="footer-company" class="font-display text-sm font-semibold uppercase text-ink dark:text-ink-invert">Công ty</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Về chúng tôi</a></li>
+                    <li><a href="#" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Tuyển dụng</a></li>
+                    <li><a href="#" class="text-sm text-muted dark:text-muted-invert hover:text-brand-600 transition-colors">Chính sách bảo mật</a></li>
                 </ul>
             </nav>
 
-            <!-- Cột 5 -->
-            <div>
-                <h3 class="footer-heading">Liên hệ</h3>
-                <p class="mt-4 text-sm text-muted">Hotline: 1900 xxxx</p>
-                <p class="mt-2 text-sm text-muted">Email: contact@hrmanager.vn</p>
-                <p class="mt-2 text-sm text-muted">TP. Hồ Chí Minh</p>
+            <div class="flex flex-col gap-4">
+                <h3 class="font-display text-sm font-semibold uppercase text-ink dark:text-ink-invert">Liên hệ</h3>
+                <div class="flex flex-col gap-2 text-sm text-muted dark:text-muted-invert">
+                    <p>Hotline: 1900 xxxx</p>
+                    <p>Email: contact@hrmanager.vn</p>
+                    <p>TP. Hồ Chí Minh</p>
+                </div>
             </div>
         </div>
 
-        <div class="mx-auto max-w-7xl px-5 sm:px-10 lg:px-20 mt-12 pt-8 border-t border-line text-center text-xs text-muted">
+        <div class="mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-20 border-t border-line dark:border-line-invert pt-8 text-center text-xs text-muted dark:text-muted-invert">
             <p>&copy; 2026 HRManager. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
 
-
-
-
-        
-    </main>
-
-   
-
 </body>
-
 </html>

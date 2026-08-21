@@ -14,6 +14,13 @@
   --color-surface: #ffffff;
   --color-line: #ffdee0;
 
+  /* màu darkmode */
+  --color-ink-invert: #e5e7eb;
+  --color-muted-invert: #9ca3af;
+  --color-surface-dark: #141414;
+  --color-surface-dark-alt: #1f1f1f;
+  --color-line-invert: #374151;
+
   /* font chữ */
   --font-display: "Be Vietnam Pro", sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -30,28 +37,24 @@
   }
 
   body {
-    @apply bg-surface text-ink font-body antialiased;
+    @apply bg-surface text-ink font-body antialiased transition-colors duration-300;
+    @apply dark:bg-surface-dark dark:text-ink-invert;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight text-ink;
+    @apply font-display font-bold tracking-tight text-ink dark:text-ink-invert;
   }
 }
 
 @layer components {
   .section {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-20 py-20;
-  }
-
-  .container-sm {
-    @apply mx-auto max-w-3xl text-center;
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-10 lg:px-20 py-16 lg:py-14;
   }
 
   .eyebrow {
     @apply font-display text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-600;
   }
 
-  /* Nút bấm cơ sở */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer;
   }
@@ -60,65 +63,26 @@
     @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer bg-brand-600 text-white hover:bg-brand-700;
   }
 
-  /* SỬA TẠI ĐÂY: Viết đầy đủ utility thay vì gọi chữ `btn` */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors cursor-pointer border border-line bg-surface text-ink hover:bg-line/30;
   }
 
   /* Thẻ Card */
   .card {
-    @apply rounded-card border border-line bg-surface p-6 shadow-sm;
+    @apply rounded-card border border-line bg-surface p-6 shadow-sm dark:border-line-invert dark:bg-surface-dark-alt;
   }
 
-  .partner-item {
-    @apply font-display text-lg font-bold text-muted opacity-80 hover:opacity-100 transition-opacity;
+  /* 7, 8, 9, 10. Hệ thống Form liên hệ chuẩn Accessibility */
+  .field-label {
+    @apply block text-sm font-medium text-ink dark:text-ink-invert;
   }
-
-  .feature-item {
-    @apply flex items-center gap-3 text-base text-ink;
+  .field-input {
+    @apply w-full rounded-md border border-line bg-surface px-4 py-2.5 text-sm text-ink outline-none focus:border-brand-600 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert dark:focus:border-brand-600;
   }
-
-  .check-icon {
-    @apply h-5 w-5 text-brand-600 shrink-0;
+  .field-hint {
+    @apply text-xs text-muted dark:text-muted-invert;
   }
-
-  .stat-card {
-    @apply rounded-card border border-line bg-surface p-6 shadow-sm text-center;
-  }
-
-  .stat-number {
-    @apply font-display text-3xl font-extrabold text-brand-600 sm:text-4xl;
-  }
-
-  .stat-label {
-    @apply mt-2 text-sm text-muted font-medium;
-  }
-
-  .pricing-card {
-    @apply rounded-card border border-line bg-surface p-6 shadow-sm flex h-full flex-col text-center;
-  }
-
-  .price-amount {
-    @apply font-display text-4xl font-extrabold text-ink;
-  }
-
-  .price-unit {
-    @apply text-xs text-muted;
-  }
-
-  .price-feature-item {
-    @apply flex items-center gap-3 text-sm text-ink;
-  }
-
-  .step-number {
-    @apply font-display text-3xl font-black text-brand-600;
-  }
-
-  .footer-heading {
-    @apply font-display text-sm font-semibold uppercase text-ink;
-  }
-
-  .footer-link {
-    @apply text-sm text-muted hover:text-brand-600 transition-colors;
+  .field-error {
+    @apply text-xs text-brand-600 hidden; /* Sẽ được bật bằng JS sau này nếu có lỗi */
   }
 }

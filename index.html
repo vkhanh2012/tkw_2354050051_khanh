@@ -15,9 +15,10 @@
 </head>
 
 <body>
+    <div id="nav-sentinel" aria-hidden="true"></div>
 
     <!-- 1. NAVBAR -->
-    <header class="sticky top-0 z-50 w-full border-b border-line dark:border-line-invert bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md">
+    <header class="sticky top-0 z-50 w-full border-b border-line dark:border-line-invert bg-surface/90 dark:bg-surface-dark/90 backdrop-blur-md" data-site-header>
     <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
         <a href="#" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">
             HRManager
@@ -30,6 +31,8 @@
             <li><a href="#contact" class="text-sm font-medium text-ink dark:text-muted-invert transition-colors hover:text-brand-600 dark:hover:text-white">Contact</a></li>
         </ul>
         <div class="flex items-center gap-4">
+            <button type="button" class="btn btn-secondary md:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Mở menu">Menu</button>
+            <button type="button" class="btn btn-secondary" data-theme-toggle aria-label="Bật chế độ tối">Theme</button>
             <a href="#cta" class="text-sm font-semibold text-ink dark:text-ink-invert transition-colors hover:text-brand-600 dark:hover:text-white">
                 Log In
             </a>
@@ -38,6 +41,9 @@
             </a>
         </div>
     </nav>
+    <div id="mobile-menu" class="hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark md:hidden" data-mobile-menu>
+        <ul class="flex flex-col gap-4 px-5 py-5"><li><a href="#tinh-nang">Features</a></li><li><a href="#faq">FAQ</a></li><li><a href="#bang-gia">Pricing</a></li><li><a href="#cta">Contact</a></li></ul>
+    </div>
 </header>
 
     <main id="main">
@@ -323,16 +329,16 @@
             </div>
             <dl class="mx-auto w-full max-w-4xl flex flex-col divide-y divide-line dark:divide-line-invert border-y border-line dark:border-line-invert">
                 <div class="py-6 flex flex-col gap-2">
-                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Phần mềm có kết nối được với máy chấm công hiện tại của công ty không?</dt>
-                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Có, HRManager hỗ trợ kết nối trực tiếp với hơn 95% các loại máy chấm công vân tay, thẻ từ và khuôn mặt phổ biến hiện nay qua cổng API bảo mật.</dd>
+                    <dt><button type="button" class="w-full text-left text-lg font-semibold text-ink dark:text-ink-invert" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-1">Phần mềm có kết nối được với máy chấm công hiện tại của công ty không?</button></dt>
+                    <dd id="faq-answer-1" class="hidden text-sm leading-relaxed text-muted dark:text-muted-invert">Có, HRManager hỗ trợ kết nối trực tiếp với hơn 95% các loại máy chấm công vân tay, thẻ từ và khuôn mặt phổ biến hiện nay qua cổng API bảo mật.</dd>
                 </div>
                 <div class="py-6 flex flex-col gap-2">
-                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Thời gian triển khai phần mềm cho chuỗi cửa hàng mất bao lâu?</dt>
-                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Cài đặt và đồng bộ dữ liệu ban đầu chỉ mất khoảng 10 phút. Đội ngũ kỹ thuật của HRManager sẽ hỗ trợ hướng dẫn nhân viên sử dụng trực tiếp trong ngày.</dd>
+                    <dt><button type="button" class="w-full text-left text-lg font-semibold text-ink dark:text-ink-invert" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-2">Thời gian triển khai phần mềm cho chuỗi cửa hàng mất bao lâu?</button></dt>
+                    <dd id="faq-answer-2" class="hidden text-sm leading-relaxed text-muted dark:text-muted-invert">Cài đặt và đồng bộ dữ liệu ban đầu chỉ mất khoảng 10 phút. Đội ngũ kỹ thuật của HRManager sẽ hỗ trợ hướng dẫn nhân viên sử dụng trực tiếp trong ngày.</dd>
                 </div>
                 <div class="py-6 flex flex-col gap-2">
-                    <dt class="text-lg font-semibold text-ink dark:text-ink-invert">Dữ liệu nhân sự và bảng lương của công ty có được bảo mật không?</dt>
-                    <dd class="text-sm leading-relaxed text-muted dark:text-muted-invert">Tất cả dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động hàng ngày trên hạ tầng đám mây đạt tiêu chuẩn an ninh quốc tế ISO 27001.</dd>
+                    <dt><button type="button" class="w-full text-left text-lg font-semibold text-ink dark:text-ink-invert" data-faq-trigger aria-expanded="false" aria-controls="faq-answer-3">Dữ liệu nhân sự và bảng lương của công ty có được bảo mật không?</button></dt>
+                    <dd id="faq-answer-3" class="hidden text-sm leading-relaxed text-muted dark:text-muted-invert">Tất cả dữ liệu được mã hóa chuẩn SSL 256-bit và sao lưu tự động hàng ngày trên hạ tầng đám mây đạt tiêu chuẩn an ninh quốc tế ISO 27001.</dd>
                 </div>
             </dl>
         </section>
@@ -438,6 +444,8 @@
             <p>&copy; 2026 HRManager. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
+    <button type="button" class="to-top hidden" data-to-top aria-label="Lên đầu trang">↑</button>
+    <script type="module" src="./js/main.js"></script>
 
 </body>
 </html>

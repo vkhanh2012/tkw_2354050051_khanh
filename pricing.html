@@ -34,6 +34,8 @@
             </div>
 
             <!-- Bảng giá -->
+            <div data-pricing>
+            <div class="flex justify-center"><button type="button" role="switch" aria-checked="false" class="btn btn-secondary">Thanh toán tháng</button></div>
             <ul class="grid items-stretch gap-8 lg:grid-cols-3">
                 <li class="card flex flex-col text-center gap-6">
                     <div class="flex flex-col gap-2">
@@ -41,7 +43,7 @@
                         <p class="text-sm text-muted">Dưới 30 nhân sự.</p>
                     </div>
                     <div class="flex flex-col gap-1 py-4">
-                        <span class="font-display text-4xl font-extrabold text-ink">20.000đ</span>
+                        <span data-price data-monthly="20000" data-yearly="240000" class="font-display text-4xl font-extrabold text-ink">20.000 ₫</span>
                         <span class="text-xs text-muted">/nhân viên/tháng</span>
                     </div>
                     <a href="contact.html" class="btn btn-secondary w-full mt-auto">Chọn gói này</a>
@@ -53,7 +55,7 @@
                         <p class="text-sm text-muted">Từ 30 – 150 nhân sự.</p>
                     </div>
                     <div class="flex flex-col gap-1 py-4">
-                        <span class="font-display text-4xl font-extrabold text-brand-600">50.000đ</span>
+                        <span data-price data-monthly="50000" data-yearly="600000" class="font-display text-4xl font-extrabold text-brand-600">50.000 ₫</span>
                         <span class="text-xs text-muted">/nhân viên/tháng</span>
                     </div>
                     <a href="contact.html" class="btn btn-primary w-full mt-auto">Trải nghiệm ngay</a>
@@ -69,7 +71,7 @@
                     </div>
                     <a href="contact.html" class="btn btn-secondary w-full mt-auto">Đăng ký tư vấn</a>
                 </li>
-            </ul>
+            </ul></div>
 
             <!-- Bảng so sánh (Cuộn ngang) -->
             <div class="flex flex-col gap-4 mt-8">

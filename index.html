@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <script>(function(){const saved=localStorage.getItem("theme");const dark=saved?saved==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",dark);})();</script>
 </head>
 
 <body>
@@ -92,7 +93,7 @@
         </section>
 
         <!-- 4. TÍNH NĂNG / FEATURES (ÁP DỤNG @apply eyebrow, card, feature-item, check-icon) -->
-        <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section flex flex-col gap-24">
+        <section id="tinh-nang" aria-labelledby="tinh-nang-title" class="section flex flex-col gap-24" data-reveal>
             <div class=flex flex-col gap-14">
                 <div class="max-w-2xl flex flex-col gap-4">
                     <p class="eyebrow">Tính năng</p>
@@ -236,9 +237,10 @@
         </section>
 
         <!-- 6. TESTIMONIALS / CẢM NHẬN KHÁCH HÀNG -->
-        <section aria-labelledby="cam-nhan-title" class="section text-center">
+        <section aria-labelledby="cam-nhan-title" class="section text-center" data-slider>
             <h2 id="cam-nhan-title" class="sr-only">Đánh giá từ khách hàng doanh nghiệp</h2>
-            <figure class="mx-auto flex max-w-4xl flex-col items-center gap-6">
+            <div class="slider-viewport"><div class="slider-track" data-slider-track>
+            <figure class="mx-auto flex max-w-4xl flex-col items-center gap-6" data-slide>
                 <svg class="h-10 w-10 text-brand-600/30" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                 </svg>
@@ -251,10 +253,15 @@
                     <cite class="not-italic text-muted dark:text-muted-invert">Giám đốc Nhân sự (HRD) - Chuỗi Undy</cite>
                 </figcaption>
             </figure>
+            <figure class="mx-auto flex max-w-4xl flex-col items-center gap-6" data-slide>
+                <blockquote class="font-display text-xl font-bold leading-relaxed text-ink dark:text-ink-invert sm:text-2xl">"Bảng lương rõ ràng hơn, đội ngũ quản lý tiết kiệm được rất nhiều thời gian mỗi tháng."</blockquote>
+                <figcaption class="text-sm"><span class="font-bold">Nguyễn Minh Quân</span> <cite class="not-italic text-muted dark:text-muted-invert">- Giám đốc vận hành</cite></figcaption>
+            </figure></div></div>
+            <div class="flex justify-center gap-2" data-slider-dots aria-label="Chọn cảm nhận"></div>
         </section>
 
         <!-- 7. PRICING / BẢNG GIÁ -->
-        <section id="bang-gia" aria-labelledby="bang-gia-title" class="section border-t border-line dark:border-line-invert flex flex-col gap-14">
+        <section id="bang-gia" aria-labelledby="bang-gia-title" class="section border-t border-line dark:border-line-invert flex flex-col gap-14" data-pricing>
             <div class="container-sm">
                 <p class="eyebrow">Bảng giá minh bạch</p>
                 <h2 id="bang-gia-title" class="text-3xl font-bold sm:text-4xl">
@@ -265,6 +272,7 @@
                 </p>
             </div>
 
+            <div class="flex justify-center"><button type="button" role="switch" aria-checked="false" class="btn btn-secondary">Thanh toán tháng</button></div>
             <ul class="grid items-stretch gap-8 lg:grid-cols-3">
                 <li class="card flex flex-col text-center gap-6">
                     <div class="flex flex-col gap-2">
@@ -272,7 +280,7 @@
                         <p class="text-sm text-muted dark:text-muted-invert">Doanh nghiệp dưới 30 nhân sự.</p>
                     </div>
                     <div class="flex flex-col gap-1 py-6">
-                        <span class="font-display text-4xl font-extrabold text-ink dark:text-ink-invert">20.000đ</span>
+                        <span data-price data-monthly="20000" data-yearly="240000" class="font-display text-4xl font-extrabold text-ink dark:text-ink-invert">20.000 ₫</span>
                         <span class="text-xs text-muted dark:text-muted-invert">/nhân viên/tháng</span>
                     </div>
                     <ul class="flex flex-col gap-3 text-left pb-8 flex-1">
@@ -290,7 +298,7 @@
                         <p class="text-sm text-muted dark:text-muted-invert">Doanh nghiệp từ 30 – 150 nhân sự.</p>
                     </div>
                     <div class="flex flex-col gap-1 py-6">
-                        <span class="font-display text-4xl font-extrabold text-brand-600">50.000đ</span>
+                        <span data-price data-monthly="50000" data-yearly="600000" class="font-display text-4xl font-extrabold text-brand-600">50.000 ₫</span>
                         <span class="text-xs text-muted dark:text-muted-invert">/nhân viên/tháng</span>
                     </div>
                     <ul class="flex flex-col gap-3 text-left pb-8 flex-1">

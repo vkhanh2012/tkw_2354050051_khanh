@@ -93,5 +93,17 @@
   .field-error {
     @apply text-xs text-brand-600 hidden;
   }
+
+  .to-top {
+    @apply fixed bottom-6 right-6 z-40 h-11 w-11 rounded-full bg-brand-600 text-xl font-bold text-white shadow-lg;
+  }
+  [data-reveal] { opacity: 0; transform: translateY(1.5rem); transition: opacity 500ms ease, transform 500ms ease; }
+  [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+  .slider-viewport { @apply overflow-hidden; }
+  .slider-track { @apply flex transition-transform duration-500 ease-out; }
+  [data-slide] { @apply min-w-full; }
+  .slider-dot { @apply h-3 w-3 rounded-full border border-brand-600; }
+  .slider-dot[aria-current="true"] { @apply bg-brand-600; }
+  @media (prefers-reduced-motion: reduce) { [data-reveal], .slider-track { transition: none; } }
   
 }

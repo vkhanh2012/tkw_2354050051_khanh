@@ -45,6 +45,7 @@ async function reload(forceSample = false) {
   try { state.records = await loadRecords(forceSample); } catch (error) { state.error = `Không tải được dữ liệu: ${error.message}`; } finally { state.loading = false; render(); }
 }
 function populateCategories() {
+  elements.category.replaceChildren(new Option("Tất cả nhóm hàng", "all"));
   [...new Set(state.records.map((record) => record.category))].sort().forEach((category) => { const option = document.createElement("option"); option.value = category; option.textContent = category; elements.category.append(option); });
 }
 elements.query.addEventListener("input", debounce((event) => { state.query = event.target.value; render(); }));

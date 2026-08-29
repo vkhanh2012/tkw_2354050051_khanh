@@ -8,21 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <script>(function(){const saved=localStorage.getItem("theme");const dark=saved?saved==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",dark);})();</script>
 </head>
 <body class="flex flex-col gap-0">
-    <header class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md">
+    <div id="nav-sentinel" aria-hidden="true"></div>
+    <header class="sticky top-0 z-50 w-full border-b border-line bg-surface/90 backdrop-blur-md" data-site-header>
         <nav aria-label="Điều hướng chính" class="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-10 lg:px-20 py-4">
             <a href="index.html" class="flex items-center gap-2 font-display text-2xl font-bold tracking-wide text-brand-600">HRManager</a>
+            <button type="button" class="btn btn-secondary md:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Mở menu">Menu</button>
+            <button type="button" class="btn btn-secondary" data-theme-toggle aria-label="Bật chế độ tối">Theme</button>
             <ul class="hidden items-center gap-8 md:flex">
                 <li><a href="index.html#tinh-nang" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Features</a></li>
-                <li><a href="pricing.html" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Pricing</a></li>
+                <li><a href="pricing.html" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Pricing</a></li><li><a href="records.html" class="text-sm font-medium text-ink transition-colors hover:text-brand-600">Dữ liệu</a></li>
                 <li><a href="contact.html" class="text-sm font-medium text-brand-600 transition-colors hover:text-brand-600">Contact</a></li>
             </ul>
         </nav>
+        <div id="mobile-menu" class="hidden border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark md:hidden"><ul class="flex flex-col gap-4 px-5 py-5"><li><a href="index.html#tinh-nang">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="records.html">Dữ liệu</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </header>
 
     <main class="flex flex-col gap-0">
-        <section aria-labelledby="contact-title" class="section grid lg:grid-cols-2 items-start gap-12 lg:gap-16">
+        <section aria-labelledby="contact-title" class="section grid lg:grid-cols-2 items-start gap-12 lg:gap-16" data-reveal>
             <div class="flex flex-col gap-4">
                 <p class="eyebrow">Hỗ trợ 24/7</p>
                 <h1 id="contact-title" class="text-4xl lg:text-5xl">Trò chuyện cùng chuyên gia</h1>
@@ -30,13 +35,15 @@
             </div>
 
             <!-- Form chuẩn Accessibility -->
-            <form action="#" method="POST" class="card flex flex-col gap-6 w-full">
+            <form action="#" method="POST" class="card flex flex-col gap-6 w-full" data-contact-form>
+                <p class="field-summary hidden" data-form-summary role="status" aria-live="polite"></p>
                 <!-- 1. Text -->
                 <div class="flex flex-col gap-2">
                     <label class="field-label" for="ho-ten">
                         Họ và tên <span class="text-brand-600" aria-hidden="true">*</span>
                     </label>
-                    <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name">
+                    <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name" aria-describedby="ho-ten-error">
+                    <p class="field-error" id="ho-ten-error" role="alert"></p>
                 </div>
 
                 <!-- 2. Email -->
@@ -44,7 +51,8 @@
                     <label class="field-label" for="email">
                         Email công việc <span class="text-brand-600" aria-hidden="true">*</span>
                     </label>
-                    <input class="field-input" id="email" name="email" type="email" required autocomplete="email">
+                    <input class="field-input" id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-error">
+                    <p class="field-error" id="email-error" role="alert"></p>
                 </div>
 
                 <!-- 3. Điện thoại (Đủ 7 thuộc tính) -->
@@ -56,31 +64,34 @@
                            pattern="[0-9]{10}" autocomplete="tel" inputmode="numeric" 
                            aria-describedby="dien-thoai-hint dien-thoai-error">
                     <p class="field-hint" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
-                    <p class="field-error" id="dien-thoai-error" role="alert">Vui lòng nhập đúng 10 số</p>
+                    <p class="field-error" id="dien-thoai-error" role="alert"></p>
                 </div>
 
                 <!-- 4. Select -->
                 <div class="flex flex-col gap-2">
                     <label class="field-label" for="quy-mo">Quy mô nhân sự</label>
-                    <select class="field-input" id="quy-mo" name="quyMo">
+                    <select class="field-input" id="quy-mo" name="quyMo" aria-describedby="quy-mo-error">
                         <option value="duoi-30">Dưới 30 người</option>
                         <option value="30-150">Từ 30 - 150 người</option>
                         <option value="tren-150">Trên 150 người</option>
                     </select>
+                    <p class="field-error" id="quy-mo-error" role="alert"></p>
                 </div>
 
                 <!-- 5. Textarea -->
                 <div class="flex flex-col gap-2">
                     <label class="field-label" for="loi-nhan">Lời nhắn</label>
-                    <textarea class="field-input" id="loi-nhan" name="loiNhan" rows="4"></textarea>
+                    <textarea class="field-input" id="loi-nhan" name="loiNhan" rows="4" aria-describedby="loi-nhan-error"></textarea>
+                    <p class="field-error" id="loi-nhan-error" role="alert"></p>
                 </div>
 
                 <!-- 6. Checkbox -->
                 <div class="flex items-center gap-3">
-                    <input id="dong-y" name="dongY" type="checkbox" required class="h-4 w-4 accent-brand-600">
+                    <input id="dong-y" name="dongY" type="checkbox" required class="h-4 w-4 accent-brand-600" aria-describedby="dong-y-error">
                     <label for="dong-y" class="text-sm text-ink">
                         Tôi đồng ý với <a href="#" class="text-brand-600 underline">Chính sách bảo mật</a>
                     </label>
+                    <p class="field-error" id="dong-y-error" role="alert"></p>
                 </div>
 
                 <button type="submit" class="btn btn-primary w-full">Gửi yêu cầu tư vấn</button>
@@ -88,8 +99,10 @@
         </section>
     </main>
 
-    <footer class="border-t border-line bg-surface py-16 text-center text-sm text-muted">
+    <footer class="border-t border-line dark:border-line-invert bg-surface dark:bg-surface-dark py-16 text-center text-sm text-muted dark:text-muted-invert">
         &copy; 2026 HRManager. Tất cả các quyền được bảo lưu.
     </footer>
+    <button type="button" class="to-top hidden" data-to-top aria-label="Lên đầu trang">↑</button>
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>
